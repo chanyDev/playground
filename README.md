@@ -5,3 +5,5 @@
 ## 구현 기능
 
 - [카카오 로그인](https://github.com/chanyDev/playground/tree/main/kakao-login)
+
+- [컴포넌트 최적화](https://github.com/chanyDev/playground/tree/main/component-optimization)
