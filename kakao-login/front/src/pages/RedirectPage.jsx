@@ -14,17 +14,17 @@ const RedirectPage = () => {
           `http://localhost:4000/auth/kakao?code=${code}`
         );
 
-        console.log(data);
+        localStorage.setItem('nickname', data.nickname);
         navigate('/');
       } catch (e) {
-        console.log(e);
+        throw Error(e);
       }
     };
 
     login();
   }, [navigate]);
 
-  return <div>RedirectPage</div>;
+  return <div>Loading...</div>;
 };
 
 export default RedirectPage;
