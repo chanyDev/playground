@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 interface StudentProps {
   product: {
     name: string;
@@ -14,4 +16,4 @@ const Product = ({ product }: StudentProps) => {
   );
 };
 
-export default Product;
+export default memo(Product);
