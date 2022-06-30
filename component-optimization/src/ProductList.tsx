@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
 import Average from './Average';
 import Product from './Product';
@@ -16,7 +16,7 @@ const ProductList = () => {
     { id: 4, name: 'New Balance 530 White', price: 91000 },
   ]);
 
-  const addProduct = () => {
+  const addProduct = useCallback(() => {
     setProductList([
       ...productList,
       {
@@ -25,14 +25,14 @@ const ProductList = () => {
         price: 100000,
       },
     ]);
-  };
+  }, [productList]);
 
-  const averagePrice = (() => {
+  const averagePrice = useMemo(() => {
     return productList.reduce(
       (prev, current) => prev + current.price / productList.length,
       0
     );
-  })();
+  }, [productList]);
 
   return (
     <div className='wrapper'>
