@@ -21,8 +21,8 @@ const ProductList = () => {
       ...productList,
       {
         id: productList.length + 1,
-        name: productForm.name,
-        price: Number(productForm.price),
+        name: '추가된 상품',
+        price: 100000,
       },
     ]);
   };
