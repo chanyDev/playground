@@ -1,7 +1,9 @@
 import counter from '../store/counter';
 
 const Controller = () => {
-  const { increase, decrease, reset } = counter(state => state);
+  const increase = counter(state => state.increase);
+  const decrease = counter(state => state.decrease);
+  const reset = counter(state => state.reset);
 
   return (
     <div>
